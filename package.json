@@ -1,0 +1,15 @@
+{
+  "name": "news-categories",
+  "version": "0.0.1",
+  "description": "Categorise news articles based on their text",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Sheldon Els <sheldon.els@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  }
+}
