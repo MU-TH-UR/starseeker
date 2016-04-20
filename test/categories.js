@@ -4,17 +4,15 @@ var should = require('chai').should(),
 
 describe('#categories()', function() {
     it('should return Science Fiction for a Science Fiction test text', function(done) {
-        fs.readFile(__dirname + '/test-science-fiction.txt', function (err, article) {
-            if (err) throw err;
-            categories(article).should.include('Science Fiction');
+        categories(__dirname + '/test-science-fiction.txt', function(categorised){
+            categorised.should.include('Science Fiction');
             done();
         });
     });
 
     it('should return Fantasy for a Fantasy test text', function(done) {
-        fs.readFile(__dirname + '/test-fantasy.txt', function (err, article) {
-            if (err) throw err;
-            categories(article).should.include('Fantasy');
+        categories(__dirname + '/test-fantasy.txt', function(categorised){
+            categorised.should.include('Fantasy');
             done();
         });
     });
