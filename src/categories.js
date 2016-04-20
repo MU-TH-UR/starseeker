@@ -1,9 +1,18 @@
 var fs = require('fs'),
     glob = require("glob");
 
-module.exports = function(file, done){
-    glob(file, function (err, files) {
+module.exports = function(path, done) {
+    glob(path, function (err, files) {
         if (err) throw err;
-        done(['Science Fiction', 'Fantasy']);
+        done([
+        	{
+        		'name': 'Science Fiction',
+        		'files': files
+        	},
+        	{
+        		'name': 'Fantasy',
+        		'files': files
+        	}
+        ]);
     });
 }

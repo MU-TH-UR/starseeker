@@ -3,6 +3,25 @@ var should = require('chai').should(),
     categories = require('../src/categories');
 
 describe('#categories()', function() {
+    it('should return an array of categories', function(done) {
+        categories(__dirname + '/test-science-fiction.txt', function(categorised) {
+            categorised.should.be.an.array;
+            for (var i = categorised.length - 1; i >= 0; i--) {
+                categorised[i].files.should.be.an.array;
+            }
+            done();
+        });
+    });
+
+    it('should return the files in each category', function(done) {
+        categories(__dirname + '/test-science-fiction.txt', function(categorised) {
+            for (var i = categorised.length - 1; i >= 0; i--) {
+                categorised[i].files.should.be.an.array;
+            }
+            done();
+        });
+    });
+
     it('should return Science Fiction for a Science Fiction test text', function(done) {
         categories(__dirname + '/test-science-fiction.txt', function(categorised) {
             categorised.should.include('Science Fiction');
