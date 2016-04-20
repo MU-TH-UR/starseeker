@@ -1,3 +1,3 @@
 module.exports = function(){
-    return ['Science Fiction'];
+    return ['Science Fiction', 'Fantasy'];
 }

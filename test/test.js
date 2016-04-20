@@ -7,4 +7,9 @@ describe('#categories()', function() {
         var article = fs.readFile('test-science-fiction.txt');
         categories(article).should.include('Science Fiction');
     });
+
+    it('should return Fantasy for a Fantasy test text', function() {
+        var article = fs.readFile('test-fantasy.txt');
+        categories(article).should.include('Fantasy');
+    });
 });
