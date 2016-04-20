@@ -1,3 +1,3 @@
-module.exports = function(){
+module.exports = function(text){
     return ['Science Fiction', 'Fantasy'];
 }
