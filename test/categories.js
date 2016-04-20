@@ -16,4 +16,18 @@ describe('#categories()', function() {
             done();
         });
     });
+
+    it('should not return Fantasy for a Science Fiction test text', function(done) {
+        categories(__dirname + '/test-fantasy.txt', function(categorised){
+            categorised.should.not.include('Science Fiction');
+            done();
+        });
+    });
+
+    it('should not return Science Fiction for a Fantasy test text', function(done) {
+        categories(__dirname + '/test-science-fiction.txt', function(categorised){
+            categorised.should.not.include('Fantasy');
+            done();
+        });
+    });
 });
