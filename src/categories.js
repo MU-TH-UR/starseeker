@@ -1,7 +1,8 @@
-var fs = require('fs');
+var fs = require('fs'),
+    glob = require("glob");
 
 module.exports = function(file, done){
-    fs.readFile(file, function (err, article) {
+    glob(file, function (err, files) {
         if (err) throw err;
         done(['Science Fiction', 'Fantasy']);
     });
