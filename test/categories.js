@@ -36,7 +36,7 @@ describe('#categories()', function() {
             attempts = [];
 
         for (var i = iterations; i >= 0; i--) {
-            categories(__dirname + '/test-large-data-set', function(categorised) {
+            categories(__dirname + '/../data/gutenberg/**/*.epub', function(categorised) {
                 attempts.push(categorised);
                 if (attempts.length > iterations) {
                     completed_iterations();

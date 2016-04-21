@@ -14,5 +14,9 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^2.4.5"
+  },
+  "dependencies": {
+    "epub": "^0.1.6",
+    "glob": "^7.0.3"
   }
 }
